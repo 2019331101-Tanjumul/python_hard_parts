@@ -26,3 +26,21 @@
 index = t.index(9) 
 count_5 = t.count(5)"""
 
+t = (1,3,5,6,44,33,44,4,4,4,4,5)
+
+count = t.count(4)
+print(count)
+
+#touple unpacking : 
+
+a,b,c,d = (1,3,4,5)
+print(b)
+
+#can you see the differences ? 
+
+dd =(12)
+print(type(dd)) #you are using touple right ? then why it's showing int ? 
+
+ee = (12,) #if i do this this will create the touple by understanding that the comma is demandig the values to be set and used as touple to assign in a string or another variable beside ee
+print(type(ee))
+
