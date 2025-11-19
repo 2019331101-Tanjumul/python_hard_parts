@@ -44,3 +44,6 @@ print(type(dd)) #you are using touple right ? then why it's showing int ?
 ee = (12,) #if i do this this will create the touple by understanding that the comma is demandig the values to be set and used as touple to assign in a string or another variable beside ee
 print(type(ee))
 
+
+
+
