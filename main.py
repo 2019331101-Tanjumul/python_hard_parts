@@ -95,9 +95,20 @@ count_5 = t.count(5)"""
 
 #python script to sum all the dictonary : 
 
-d2 = {10:100,30:300}
-newfile = 0
-for i in d2 : 
-    newfile+=i
+# d2 = {10:100,30:300}
+# newfile = 0
+# for i in d2 : 
+#     newfile+=i
     
-print(newfile)
+# print(newfile)
+
+a = [1,1,1,2,2,2,3,3,3,4,4,55,4,5,5,6,7,8]
+
+d = {}
+
+for i in a: 
+    if i in d.keys():
+        d[i]+=1 
+    else : 
+        d[i]=1 
+print(d)
