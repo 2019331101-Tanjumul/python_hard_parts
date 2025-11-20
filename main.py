@@ -78,12 +78,26 @@ count_5 = t.count(5)"""
 
 # print(d.items())
 
-d1 = {1:200, 2:400, 4:0, 5:992, 6:293}
-print(d1)
-d2 = {40:99, 60:49, 32:2, 22:94, 99:3}
-d3 = {11:33,14:22}
-for i in d2:
-   d1[i] = d2[i]
+# d1 = {1:200, 2:400, 4:0, 5:992, 6:293,11:17}
+# print(d1)
+# d2 = {40:100, 60:50, 32:20, 22:100, 99:30}
+# d3 = {11:33,14:22}
+# for i in d2:
+#    d1[i] = d2[i]
 
-d1.update(d3)
-print(d1)  #here the usecase is same
+# d1.update(d3)
+# print(d1)  #here the usecase is same 
+#if there is multiple distinct numbers it will update them aswell 
+# here this is the output after marging the two dictonary but it also updated the new value to old one 
+'''{1: 200, 2: 400, 4: 0, 5: 992, 6: 293, 11: 17}
+{1: 200, 2: 400, 4: 0, 5: 992, 6: 293, 11: 33, 40: 99, 60: 49, 32: 2, 22: 94, 99: 3, 14: 22}'''
+
+
+#python script to sum all the dictonary : 
+
+d2 = {10:100,30:300}
+newfile = 0
+for i in d2 : 
+    newfile+=i
+    
+print(newfile)
