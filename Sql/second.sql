@@ -121,5 +121,8 @@ INSERT INTO employee ( fname , lname , email , dept , salary , hire_date) VALUES
 
 -- select fname , lname , dept, salary from employee order by salary desc limit 5  ; 
 
-select fname , lname , dept, salary , rank() over(partition by dept order by salary desc) as ranked_salry
-from employee;
+--here if i want to see the dept name and the count of the employees only then 
+
+select dept , sum(salary) from employee group by dept ; 
+
+--1:50:00 start the session from here; 
