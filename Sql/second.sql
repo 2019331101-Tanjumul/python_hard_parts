@@ -178,7 +178,12 @@ INSERT INTO employee ( fname , lname , email , dept , salary , hire_date) VALUES
 
 --position : now you can make or cutout someting particular from a word like this : 
 
-select position('om' in 'TanjumulAlomSiam');
+-- select position('om' in 'TanjumulAlomSiam');
+
+-- need Tanjumul:Alom:it in this way 
+
+select concat_ws(':',fname , lname , dept) from employee ;
+
 
 
 
