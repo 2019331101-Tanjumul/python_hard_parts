@@ -1,28 +1,33 @@
+DROP TABLE IF EXISTS persons;
 
-drop table if EXISTS mypersons;
-
-create table persons(
-    p_id serial PRIMARY key,  
-    name VARCHAR(50) not null ,
-   city VARCHAR(50) not null ,
-    age varchar(50) not null 
+CREATE TABLE persons(
+    p_id SERIAL PRIMARY KEY,  
+    fname VARCHAR(50),  -- Added fname column
+    name VARCHAR(50),
+    city VARCHAR(50) NOT NULL,
+    age VARCHAR(50) NOT NULL
 );
 
+INSERT INTO persons(fname, name, city, age) VALUES 
+('Tanjumul', 'Alom', 'Gaibandha', '25'),
+('Maria', 'Khan', 'Dhaka', '28'),
+('John', 'Doe', 'Chittagong', '32'),
+('Fatima', 'Begum', 'Sylhet', '22'),
+('Raj', 'Sharma', 'Khulna', '35'),
+('Aisha', 'Ahmed', 'Rajshahi', '29'),
+('David', 'Smith', 'Barisal', '31'),
+('Sophia', 'Islam', 'Rangpur', '26');
 
-insert into persons( name , city , age ) values 
- ('Tanjumul' , 'Gaibandha','25'),
- ('Maria', 'Dhaka', '28'),
-('John', 'Chittagong', '32'),
-('Fatima', 'Sylhet', '22'),
-('Raj', 'Khulna', '35'),
-('Aisha', 'Rajshahi', '29'),
-('David', 'Barisal', '31'),
-('Sophia', 'Rangpur', '26');
+SELECT * FROM persons;
 
-select * from persons; 
+ALTER TABLE persons ADD COLUMN smoker VARCHAR(20) DEFAULT '0';
 
-alter table persons add column smoker varchar(20) default 0 ; 
+ALTER TABLE persons RENAME COLUMN smoker TO addicted;
 
-alter table persons rename column smoker to addicted ;
-alter table persons rename to mypersons;
-select * from mypersons; 
+
+INSERT INTO persons (fname, name, city, age) VALUES ('Smith', 'Wilson', 'New York', '30');
+
+alter table persons alter column fname set default 'unknown'; 
+insert into persons( name , city , age) values('tanjumul','new-south-walse','27');
+
+SELECT * FROM persons;
