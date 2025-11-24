@@ -34,3 +34,5 @@ alter table persons alter column fname drop default;
 insert into persons( name , city , age) values('tanjumul','new-south-walse','27');
 
 SELECT * FROM persons;
+
+--start forom : 2:31 --check is the topic ! 
