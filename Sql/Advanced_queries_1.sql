@@ -1,5 +1,5 @@
 
-drop table if EXISTS persons;
+drop table if EXISTS mypersons;
 
 create table persons(
     p_id serial PRIMARY key,  
@@ -24,4 +24,5 @@ select * from persons;
 alter table persons add column smoker varchar(20) default 0 ; 
 
 alter table persons rename column smoker to addicted ;
-select * from persons; 
+alter table persons rename to mypersons;
+select * from mypersons; 
