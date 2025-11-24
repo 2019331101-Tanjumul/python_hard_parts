@@ -161,8 +161,13 @@ INSERT INTO employee ( fname , lname , email , dept , salary , hire_date) VALUES
 
 --Task : you have to disply the names of them where their's first name's len is >= 5 
 
-select * from employee where length(fname) >= 5 order by emp_id; 
+-- select * from employee where length(fname) >= 5 order by emp_id; 
 
+--jsut like the substring : if i want to print from left then right i will do: 
+
+-- select right('Hello  world', 5) --what is happening here is , it is pointing at the end of the last right word then counting backwards to print the 5 words
+
+-- select left('TanjumulAlom', 8) -- it's printing the word's 8 characters from fist to first 8 here it's pointer is sitting in the first word [0]th position
 
 
 
