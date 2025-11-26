@@ -18,6 +18,8 @@ INSERT INTO employees (fname, salary) VALUES
 ('Emily Davis', 75000.00),
 ('Robert Miller', 48000.00),
 ('Lisa Wilson', 67000.00),
+('Lis Wilson', 6000.00),
+('Lsa Wilson', 7000.00),
 ('James Taylor', 54000.00);
 
 /*Here now i want to add an another table with set amount of words like the if else statemeny type now :*/
@@ -28,8 +30,11 @@ INSERT INTO employees (fname, salary) VALUES
 -- else 'Not liveable'
 -- end as salary_category from employees;
 
-select fname , salary , 
-case when salary >= 50000 then 'liveable' else 'not liveable'
-end as salary_discriptions from employees; 
+select fname,salary, case 
+when salary > 50000 then 'Liveable'
+when salary between 250000 and 35000 then 'Mid level'
+when salary <= 15000 then 'Misarable' 
+else 'semi liveable'
+end as salary_type from employees order by salary desc; 
 
 
