@@ -13,6 +13,9 @@
 def lin_in(n): 
     for i in range(n): 
         print(i)
-
-lin_in(100)
+        
+    for j in range(n): 
+        print(j)
+        # print("j")
+lin_in(10)
 
