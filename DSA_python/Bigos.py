@@ -25,10 +25,26 @@
 
 #run time complexity of O(n^2)
 
-def set_in(n): 
-    for i in range(n): #-------> runs as the complexity of o(n)
-        for j in range(n): #-------> runs the complexity of o(n)
-            print(i,j) #-------->running in after in every o(n) then O(n) making it the n*n times = n^2
+# def set_in(n): 
+#     for i in range(n): #-------> runs as the complexity of o(n)
+#         for j in range(n): #-------> runs the complexity of o(n)
+#             print(i,j) #-------->running in after in every o(n) then O(n) making it the n*n times = n^2
             
 
-set_in(10)
+# set_in(10)
+
+
+#for an analogy : 
+
+
+def lin_in(n): 
+    for i in range(n): 
+      
+        
+        for j in range(n): 
+            print(i,j)
+        
+        for k in range(n): 
+            print(k)
+lin_in(10)
+
